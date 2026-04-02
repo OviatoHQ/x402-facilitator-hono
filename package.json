@@ -1,0 +1,75 @@
+{
+  "name": "@oviato/x402-facilitator-hono",
+  "version": "1.0.0",
+  "description": "Mountable Hono sub-app implementing the x402 facilitator protocol",
+  "license": "Apache-2.0",
+  "author": "Oviato",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OviatoHQ/x402-facilitator-hono.git"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "format": "prettier --check src/",
+    "format:fix": "prettier --write src/",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm lint && pnpm test && pnpm build"
+  },
+  "peerDependencies": {
+    "hono": ">=4.0.0"
+  },
+  "dependencies": {
+    "@scure/base": "^1.2.0",
+    "@solana/kit": ">=5.1.0",
+    "@x402/core": "^2.0.0",
+    "@x402/evm": "^2.0.0",
+    "@x402/svm": "^2.0.0",
+    "viem": "^2.39.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "hono": "^4.0.0",
+    "prettier": "^3.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "packageManager": "pnpm@9.15.4",
+  "keywords": [
+    "x402",
+    "hono",
+    "facilitator",
+    "payment",
+    "protocol",
+    "evm",
+    "solana",
+    "cloudflare-workers"
+  ]
+}

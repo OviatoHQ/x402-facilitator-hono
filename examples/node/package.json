@@ -1,0 +1,17 @@
+{
+  "name": "x402-facilitator-node",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx --env-file=.env src/index.ts",
+    "start": "node --env-file=.env dist/index.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.0.0",
+    "@oviato/x402-facilitator-hono": "workspace:*",
+    "hono": "^4.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0"
+  }
+}

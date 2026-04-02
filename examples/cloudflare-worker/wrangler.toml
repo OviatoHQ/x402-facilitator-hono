@@ -1,0 +1,12 @@
+name = "x402-facilitator"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+# Set these via `wrangler secret put` or in .dev.vars
+# EVM_PRIVATE_KEY = "0x..."
+# RPC_URL_BASE_SEPOLIA = "https://..."
+
+[[kv_namespaces]]
+binding = "NONCE_KV"
+id = "your-kv-namespace-id"
