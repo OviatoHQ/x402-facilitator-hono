@@ -222,16 +222,11 @@ The gas wallet **only** pays gas fees. It does not hold or custody user funds. P
 
 Every payment nonce is checked against the `NonceStore` before verification. After successful settlement, the nonce is stored to prevent the same payment from being settled twice.
 
-## Branch Protection
+## About Oviato
 
-After creating the GitHub repository, configure these branch protection rules for `main`:
+This package is maintained by [Oviato](https://oviato.com) — passkey-native, chain-agnostic wallet infrastructure. Oviato lets developers spin up self-custody embedded wallets in seconds using Face ID, Touch ID, or passkeys instead of seed phrases. One SDK, one identity ([Ovi.id](https://oviato.com/product/id)), across Bitcoin, EVM, Solana, and more.
 
-- Require pull request before merging (no direct pushes)
-- Require 1 approval
-- Dismiss stale PR approvals when new commits are pushed
-- Require review from code owners (see `.github/CODEOWNERS`)
-- Require status checks to pass before merging
-- Require branches to be up to date before merging
+Backed by Draper VC, Boost VC, CoinGecko, and Etherscan. [Try the live demo](https://oviato.com/demo).
 
 ## Contributing
 
